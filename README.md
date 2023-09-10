@@ -66,13 +66,13 @@ for name in wm.walletsInfo:
 
 
 
-### salt file will be used for encryption
+### Generate a "salt" file
 ```python
 saltFileName = 'saltFile2.txt'
 wm.createSaltFile(saltFileName)
 ```
 
-### create new encryptedWallet
+### create new encryptedWallet, using salt file, along with a password
 ```python
 encWallet = 'walletsEncrypted.txt'
 #window will pop up asking for password
@@ -82,7 +82,7 @@ wm.createNewWalletsAutoGenerate(encWallet,
                                 walletNamePrefix='myWalletEncrypted-')
 ```
 
-### encrypt first wallet
+### encrypt the first, unencrypted wallet
 ```python
 encWallet = 'walletsEncrypted2.txt'
 #window will pop up asking for password
@@ -107,11 +107,11 @@ wm.addWalletInfoToWalletFileManual(encWallet, saltFileName)
 
 ## Caution
 
-While this library provides an option to encrypt your Ethereum private keys, it's crucial to take proper security measures and frequently back up your data. Private keys are sensitive pieces of information, and their loss or theft can lead to loss of funds. Always double-check and make sure to use a strong encryption key.
+This library is unaudited. Please use at your own risk.
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+I'd be very interested in learning about any bugs or security holes in this library. Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 MIT
